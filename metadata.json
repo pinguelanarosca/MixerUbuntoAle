@@ -1,0 +1,8 @@
+{
+  "uuid": "mixer-rapido@alee.local",
+  "name": "Mixer Rápido",
+  "description": "Controle o volume de cada fluxo de áudio pelo ícone na barra superior.",
+  "shell-version": ["50"],
+  "settings-schema": "org.gnome.shell.extensions.mixer-rapido",
+  "version": 2
+}

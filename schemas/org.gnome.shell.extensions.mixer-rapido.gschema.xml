@@ -1,0 +1,9 @@
+<schemalist>
+  <schema id="org.gnome.shell.extensions.mixer-rapido" path="/org/gnome/shell/extensions/mixer-rapido/">
+    <key name="chrome-start-volume" type="u">
+      <range min="0" max="100"/>
+      <default>60</default>
+      <summary>Volume inicial das novas faixas do Chrome</summary>
+    </key>
+  </schema>
+</schemalist>
