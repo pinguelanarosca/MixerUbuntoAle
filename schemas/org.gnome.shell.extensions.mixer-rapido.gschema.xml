@@ -5,5 +5,39 @@
       <default>60</default>
       <summary>Volume inicial das novas faixas do Chrome</summary>
     </key>
+    <key name="voice-start-volume" type="u">
+      <range min="0" max="100"/>
+      <default>60</default>
+      <summary>Volume inicial das novas faixas de voz</summary>
+    </key>
+    <key name="sounds-start-volume" type="u">
+      <range min="0" max="100"/>
+      <default>60</default>
+      <summary>Volume inicial das novas faixas de sons</summary>
+    </key>
+    <key name="classification-migrated" type="b">
+      <default>false</default>
+      <summary>Volume antigo preservado nos dois novos controles</summary>
+    </key>
+    <key name="provisional-volume" type="u">
+      <range min="0" max="100"/>
+      <default>20</default>
+      <summary>Limite de volume provisório para fluxos ainda indefinidos</summary>
+    </key>
+    <key name="classification-deadline-ms" type="u">
+      <range min="100" max="5000"/>
+      <default>500</default>
+      <summary>Prazo desejado para identificação, em milissegundos</summary>
+    </key>
+    <key name="narrator-threshold" type="d">
+      <range min="0.3" max="0.95"/>
+      <default>0.65</default>
+      <summary>Similaridade mínima para indicar voz compatível com o narrador</summary>
+    </key>
+    <key name="classification-max-hold-ms" type="u">
+      <range min="500" max="5000"/>
+      <default>2000</default>
+      <summary>Retenção máxima antes de liberar com volume provisório</summary>
+    </key>
   </schema>
 </schemalist>

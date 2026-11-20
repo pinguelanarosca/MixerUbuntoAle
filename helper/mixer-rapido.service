@@ -1,0 +1,30 @@
+[Unit]
+Description=Mixer Rápido — captura e classificação local de áudio
+After=pipewire.service pipewire-pulse.service
+PartOf=graphical-session.target
+StartLimitIntervalSec=60
+StartLimitBurst=10
+
+[Service]
+Type=dbus
+BusName=org.gnome.Shell.Extensions.MixerRapido
+ExecStart=/usr/bin/python3 %h/.local/share/gnome-shell/extensions/mixer-rapido@alee.local/helper/service.py
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=5
+KillMode=control-group
+Nice=10
+CPUWeight=20
+MemoryHigh=768M
+MemoryMax=1G
+OOMPolicy=kill
+Environment=PYTHONUNBUFFERED=1
+Environment=HF_HUB_OFFLINE=1
+Environment=OMP_NUM_THREADS=1
+Environment=OPENBLAS_NUM_THREADS=1
+NoNewPrivileges=true
+RestrictAddressFamilies=AF_UNIX
+UMask=0077
+
+[Install]
+WantedBy=graphical-session.target

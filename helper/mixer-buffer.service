@@ -1,0 +1,20 @@
+[Unit]
+Description=Mixer Rápido — retenção nativa PipeWire por fluxo
+After=pipewire.service wireplumber.service mixer-rapido.service
+PartOf=graphical-session.target
+StartLimitIntervalSec=0
+
+[Service]
+ExecStart=%h/.local/share/gnome-shell/extensions/mixer-rapido@alee.local/helper/mixer-buffer-engine
+Restart=always
+RestartSec=250ms
+KillMode=control-group
+TimeoutStopSec=5
+MemoryHigh=384M
+MemoryMax=512M
+RestrictAddressFamilies=AF_UNIX
+NoNewPrivileges=true
+UMask=0077
+
+[Install]
+WantedBy=graphical-session.target

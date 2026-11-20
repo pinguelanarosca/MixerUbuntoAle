@@ -1,0 +1,15 @@
+__pycache__/
+helper/.venv/
+helper/models/
+helper/build-deps/
+helper/mixer-buffer-engine
+test-results/
+TESTES*.md
+schemas/gschemas.compiled
+*.shell-extension.zip
+helper/buffer-build.json
+helper/buffer-policy.json
+*.download
+*.new
+.pytest_cache/
+.ruff_cache/
